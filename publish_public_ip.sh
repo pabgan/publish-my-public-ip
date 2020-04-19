@@ -6,5 +6,5 @@ filename=$hostname"_public_ip.txt"
 
 public_ip=$(curl ipinfo.io/ip)
 
-echo $public_ip > $filename
-scp $filename $output_machine:$output_folder
+echo $public_ip > /tmp/$filename
+scp /tmp/$filename $output_machine:$output_folder
